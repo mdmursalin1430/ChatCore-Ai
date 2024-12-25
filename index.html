@@ -145,6 +145,10 @@
             font-style: italic;
             color: gray;
         }
+
+        .bot-response {
+            color: #7209b7;
+        }
     </style>
 </head>
 <body>
@@ -178,18 +182,58 @@
 
 */
         const chatbotResponses = {
-            "hello": "Hi there! How can I help you today?",
-            "how are you": "I'm just a bot, but I'm here to assist you!",
-            "what is your name": "I'm ChatCore AI, your virtual assistant.",
-            "bye": "Goodbye! Have a great day!",
-            "what is your purpose": "I'm here to help you with any questions you may have.",
-            "what can you do": "I can provide information, answer questions, and assist you with various tasks.",
-            "who created you": "I was created by Md. GM Mursalin By the Almighty, ALLAH.",
+            "hello": "<span style='color: 7209b7;'>Hi there! How can I help you today?</span>",
+            "how are you?": "<span style='color: 7209b7;'>I'm just a bot, but I'm here to assist you!</span>",
+            "what is your name?": "<span style='color: 7209b7;'>I'm ChatCore AI, your virtual assistant.</span>",
+            "bye": "<span style='color: 7209b7;'>Goodbye! Have a great day!</span>",
+            "what is your purpose?": "<span style='color: 7209b7;'>I'm here to help you with any questions you may have.</span>",
+            "what can you do?": "<span style='color: 7209b7;'>I can provide information, answer questions, and assist you with various tasks.</span>",
+            "who created you?": "<span style='color: 7209b7;'>I was created by Md. GM Mursalin By the Almighty, ALLAH.</span>",
+            "tell me about bangladesh": "<span style='color: 7209b7;'>Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lushery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.</span>",
+            "what is the capital of bangladesh?": "<span style='color: 7209b7;'>The capital of Bangladesh is Dhaka.</span>",
+            "what is the population of bangladesh?": "<span style='color: 7209b7;'>As of 2021, the population of Bangladesh is over 166 million people.</span>",
+            "what is the currency of bangladesh?": "<span style='color: 7209b7;'>The currency of Bangladesh is the Bangladeshi Taka (BDT).</span>",
+            "what is the official language of bangladesh?": "<span style='color: 7209b7;'>The official language of Bangladesh is Bengali (Bangla).</span>",
+            "what is the national flower of bangladesh?": "<span style='color: 7209b7;'>The national flower of Bangladesh is the Water Lily (Shapla).</span>",
+            "what is the national animal of bangladesh?": "<span style='color: 7209b7;'>The national animal of Bangladesh is the Royal Bengal Tiger.</span>",
+            "what is the national bird of bangladesh?": "<span style='color: 7209b7;'>The national bird of Bangladesh is the Oriental Magpie-Robin (Doyel or Doel).</span>",
+            "what is the national fruit of bangladesh?": "<span style='color: 7209b7;'>The national fruit of Bangladesh is the Jackfruit.</span>",
+            "what is the national sport of bangladesh?": "<span style='color: 7209b7;'>The national sport of Bangladesh is Kabaddi.</span>",
+            "what is the national tree of bangladesh?": "<span style='color: 7209b7;'>The national tree of Bangladesh is the Mango Tree.</span>",
+            "tell me about india": "<span style='color: 7209b7;'>India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by land area, the second-most populous country, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west; China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand, Myanmar and Indonesia.</span>",
+            "what is the capital of india?": "<span style='color: 7209b7;'>The capital of India is New Delhi.</span>",
+            "what is the population of india?": "<span style='color: 7209b7;'>As of 2021, the population of India is over 1.3 billion people.</span>",
+            "what is the currency of india?": "<span style='color: 7209b7;'>The currency of India is the Indian Rupee (INR).</span>",
+            "what is the official language of india?": "<span style='color: 7209b7;'>The official languages of India are Hindi and English.</span>",
+            "what is the national flower of india?": "<span style='color: 7209b7;'>The national flower of India is the Lotus.</span>",
+            "what is the national animal of india?": "<span style='color: 7209b7;'>The national animal of India is the Bengal Tiger.</span>",
+            "what is the national bird of india?": "<span style='color: 7209b7;'>The national bird of India is the Indian Peafowl (Peacock).</span>",
+            "what is the national fruit of india?": "<span style='color: 7209b7;'>The national fruit of India is the Mango.</span>",
+            "what is the national sport of india?": "<span style='color: 7209b7;'>The national sport of India is Field Hockey.</span>",
+            "what is the national tree of india?": "<span style='color: 7209b7;'>The national tree of India is the Banyan Tree.</span>",
+            "tell me about pakistan": "<span style='color: 7209b7;'>Pakistan, officially the Islamic Republic of Pakistan, is a country in South Asia. It is the world's fifth-most populous country, with a population exceeding 225.2 million, and has the world's second-largest Muslim population. Pakistan is the 33rd-largest country by area, spanning 881,913 square kilometers (340,509 square miles). It has a 1,046-kilometer (650-mile) coastline along the Arabian Sea and Gulf of Oman in the south, and is bordered by India to the east, Afghanistan to the west, Iran to the southwest, and China to the northeast. It is separated narrowly from Tajikistan by Afghanistan's Wakhan Corridor in the north, and also shares a maritime border with Oman.</span>",
+            "what is the capital of pakistan?": "<span style='color: 7209b7;'>The capital of Pakistan is Islamabad.</span>",
+            "what is the population of pakistan?": "<span style='color: 7209b7;'>As of 2021, the population of Pakistan is over 225 million people.</span>",
+            "what is the currency of pakistan?": "<span style='color: 7209b7;'>The currency of Pakistan is the Pakistani Rupee (PKR).</span>",
+            "what is the official language of pakistan?": "<span style='color: 7209b7;'>The official languages of Pakistan are Urdu and English.</span>",
+            "what is the national flower of pakistan?": "<span style='color: 7209b7;'>The national flower of Pakistan is the Jasmine.</span>",
+            "what is the national animal of pakistan?": "<span style='color: 7209b7;'>The national animal of Pakistan is the Markhor.</span>",
+            "what is the national bird of pakistan?": "<span style='color: 7209b7;'>The national bird of Pakistan is the Chukar Partridge.</span>",
+            "what is the national fruit of pakistan?": "<span style='color: 7209b7;'>The national fruit of Pakistan is the Mango.</span>",
+            "what is the national sport of pakistan?": "<span style='color: 7209b7;'>The national sport of Pakistan is Field Hockey.</span>",
+            "what is the national tree of pakistan?": "<span style='color: 7209b7;'>The national tree of Pakistan is the Deodar Cedar.</span>",
+            };
+
+            const chatbotResponsesLowerCase = {};
+            for (const key in chatbotResponses) {
+                chatbotResponsesLowerCase[key.toLowerCase()] = chatbotResponses[key];
+            }
+
     // Add more in this format
 
 
     
-        };
+        
 
         toggleMode.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
@@ -214,12 +258,35 @@
                 messages.scrollTop = messages.scrollHeight;
 
                 setTimeout(() => {
-                    const botResponse = chatbotResponses[message.toLowerCase()] || "I'm not sure about that. Can you ask something else?";
+                    const normalizedMessage = message.trim().toLowerCase();
+                    const botResponse = chatbotResponses[normalizedMessage] || "I'm not sure about that. Can you ask something else?";
                     displayMessage(botResponse, 'bot');
                 }, 1000); // Simulating typing delay
             }
         }
+        function displayMessage(message, sender) {
+            const messageDiv = document.createElement('div');
+            if (sender === 'bot') {
+            const typingIndicator = document.createElement('div');
+            typingIndicator.textContent = 'ChatCore AI is typing...';
+            typingIndicator.classList.add('typing');
+            messages.appendChild(typingIndicator);
+            
+            if (message === "I'm not sure about that. Can you ask something else?") {
+                messageDiv.innerHTML = `<span style='color: red;'>${message}</span>`;
+            } else {
+                messageDiv.innerHTML = `<span style='color: 7209b7;'>${message}</span>`;
+            }
+            }
+            messageDiv.classList.add('bot-response');
 
+            setTimeout(() => {
+                typingIndicator.remove();
+                messages.appendChild(messageDiv);
+                messages.scrollTop = messages.scrollHeight;
+            }, 1000);
+            }
+        
         function displayMessage(message, sender) {
             const messageDiv = document.createElement('div');
             if (sender === 'bot') {
@@ -227,11 +294,12 @@
                 typingIndicator.textContent = 'ChatCore AI is typing...';
                 typingIndicator.classList.add('typing');
                 messages.appendChild(typingIndicator);
-                messages.scrollTop = messages.scrollHeight;
+                    messageDiv.innerHTML = message;
+                    messageDiv.classList.add('bot-response');
 
                 setTimeout(() => {
                     typingIndicator.remove();
-                    messageDiv.textContent = message;
+                    messageDiv.innerHTML = message;
                     messages.appendChild(messageDiv);
                     messages.scrollTop = messages.scrollHeight;
                 }, 1000);
@@ -244,5 +312,4 @@
     </script>
 </body>
 </html>
-
 
